@@ -1,0 +1,18 @@
+<%= form_for @trade, url: { controller: 'trades', action: 'create' } do |f| %>
+  <h3>Credit:</h3>
+  <%= f.fields_for :credit do |cr| %>
+    <%= cr.label :name %>
+    <%= cr.text_field :name %>
+    <%= cr.label :quantity %>
+    <%= cr.text_field :quantity %>
+  <% end %>
+
+  <h3>Debit:</h3>
+  <%= f.fields_for :debit do |dr| %>
+    <%= dr.label :name %>
+    <%= dr.text_field :name %>
+    <%= dr.label :quantity %>
+    <%= dr.text_field :quantity %>
+  <% end %>
+  <%= f.submit %>
+<% end %>

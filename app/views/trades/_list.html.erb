@@ -1,0 +1,8 @@
+<ol>
+  <% for trade in @trades %>
+    <li>
+    <em>Credit:</em> <%= trade.credit.name %>: <%= trade.credit.quantity %>
+    <em>Debit:</em> <%= trade.debit.name %>: <%= trade.debit.quantity %>
+    </li>
+  <% end %>
+</ol>
