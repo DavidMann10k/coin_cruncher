@@ -7,6 +7,10 @@ class PagesController < ApplicationController
       debit:  Entry.new(credit: false)
     )
     @trades = current_user.trades.includes(:debit, :credit) if current_user
+    
+  end
+
+  def portfolio
     @entry_totals = current_user.entry_totals if current_user
   end
 end

@@ -1,11 +1,1 @@
-<%= render 'layouts/header' %>
-<% if current_user %>
-  <h2>Portfolio Values</h2>
-  <%= render 'trades/entry_totals' %>
 
-  <h2>Create New Transaction</h2>
-  <%= render 'trades/form' %>
-
-  <h2>Transactions</h2>
-  <%= render 'trades/list' %>
-<% end %>

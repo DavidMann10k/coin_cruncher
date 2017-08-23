@@ -10,7 +10,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0.beta'
-
+gem 'httparty'
 gem 'turbolinks', '~> 5'
 gem 'bcrypt', '~> 3.1.11'
 
