@@ -1,8 +1,20 @@
-<ol>
-  <% for trade in @trades %>
-    <li>
-    <em>Credit:</em> <%= trade.credit.name %>: <%= trade.credit.quantity %>
-    <em>Debit:</em> <%= trade.debit.name %>: <%= trade.debit.quantity %>
-    </li>
-  <% end %>
-</ol>
+<table class='table table-striped'>
+  <thead class='thead-inverse'>
+    <tr>
+      <th>Buy</th>
+      <th>Sell</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for trade in @trades %>
+      <tr>
+        <td>
+          <%= trade.debit.name %>: <strong><%= trade.debit.quantity %></strong>
+        </td>
+        <td>
+          <%= trade.credit.name %>: <strong><%= trade.credit.quantity %></strong>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

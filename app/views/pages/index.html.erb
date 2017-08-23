@@ -1,17 +1,11 @@
-<h1>Crypto Cruncher</h1>
+<%= render 'layouts/header' %>
 <% if current_user %>
-  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-  <%= link_to 'Account Settings', edit_user_registration_path %>
-
   <h2>Portfolio Values</h2>
   <%= render 'trades/entry_totals' %>
-  
+
   <h2>Create New Transaction</h2>
   <%= render 'trades/form' %>
 
   <h2>Transactions</h2>
   <%= render 'trades/list' %>
-<% else %>
-  <%= link_to 'Sign Up', new_user_registration_path %>
-  <%= link_to 'Sign In', new_user_session_path %>
 <% end %>
