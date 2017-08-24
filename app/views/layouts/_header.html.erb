@@ -1,14 +1,44 @@
 <div class='header row align-items-center'>
   <div class='col'>
-    <h2>Crypto Cruncher</h2>
+    <h2>crypto cruncher</h2>
   </div>
+
   <div class='col text-right'>
     <% if current_user %>
-      <%= link_to 'Sign Out', destroy_user_session_path, class: ['btn', 'btn-primary', 'btn-sm'], method: :delete %>
-      <%= link_to 'Account Settings', edit_user_registration_path, class: ['btn', 'btn-link', 'btn-sm'] %> 
+      <div class='dropdown d-inline-block'>
+        <button class='btn btn-secondary dropdown-toggle btn-sm'
+          type='button'id='dropdownMenuButton'
+          data-toggle='dropdown'
+          aria-haspopup='true'
+          aria-expanded='false'>
+          Account
+        </button>
+        <div class='dropdown-menu'  aria-labelledby='dropdownMenuButton'>
+
+          <%= link_to 'Portfolio',
+            portfolio_path,
+            class: ['btn btn-link dropdown-item'] %>
+
+          <%= link_to 'Transactions',
+            transactions_path,
+            class: ['btn btn-link dropdown-item'] %>
+
+          <div class="dropdown-divider"></div>
+
+          <%= link_to 'Settings',
+            edit_user_registration_path,
+            class: ['btn btn-link dropdown-item d-inline'] %>
+        </div>
+      </div>
+
+      <%= link_to 'Sign Out',
+        destroy_user_session_path,
+        class: ['btn btn-link d-inline-block btn-sm'],
+          method: :delete %>
     <% else %>
-      <%= link_to 'Sign In', new_user_session_path, class: ['btn', 'btn-primary', 'btn-sm'] %>
-      <%= link_to 'Sign Up', new_user_registration_path, class: ['btn', 'btn-link', 'btn-sm'] %>
+      <%= link_to 'Sign In', new_user_session_path, class: ['btn btn-primary btn-sm'] %>
+      <%= link_to 'Sign Up', new_user_registration_path, class: ['btn btn-link btn-sm'] %>
     <% end %>
   </div>
+
 </div>
