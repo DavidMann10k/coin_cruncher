@@ -7,5 +7,5 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :trades, only: :create
+  resources :trades, only: [:new, :create]
 end

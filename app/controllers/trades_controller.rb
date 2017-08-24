@@ -1,5 +1,12 @@
 class TradesController < ApplicationController
 
+  def new
+    @trade = Trade.new(
+      credit: Entry.new(credit: true), 
+      debit:  Entry.new(credit: false)
+    )
+  end
+
   # POST /trades
   def create
     puts "trade_params.to_h: " + trade_params.to_h.to_s

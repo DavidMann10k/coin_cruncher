@@ -2,10 +2,6 @@ class PagesController < ApplicationController
 
   # GET /
   def index
-    @trade = Trade.new(
-      credit: Entry.new(credit: true), 
-      debit:  Entry.new(credit: false)
-    )    
   end
 
   def portfolio
