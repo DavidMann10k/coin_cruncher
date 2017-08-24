@@ -22,6 +22,7 @@
       <% end %>
 
       <div class='container'>
+        <div class='row breathing-room'></div>
         <div class='row'>
           <div class='col'>
             <%= yield %>
@@ -33,5 +34,5 @@
   </body>
 </html>
 <script type="text/javascript">
-  $(".notice, .alert").delay(2000).slideUp(500)
+  $(".notice").delay(2000).slideUp(500)
 </script>

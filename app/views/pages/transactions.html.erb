@@ -1,3 +1,10 @@
-<h2>Transactions</h2>
-<%= link_to 'New Transaction', new_trade_path, class: 'btn btn-primary' %>
+<div class='row '>
+  <div class='col'>
+    <h3>Transactions</h3>
+  </div>
+  <div class='col text-right'>
+    <%= link_to '+ new transaction', new_trade_path, class: 'btn btn-link' %>
+  </div>
+</div>
+
 <%= render 'trades/list' %>

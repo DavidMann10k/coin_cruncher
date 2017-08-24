@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 
   # GET /
   def index
+    redirect_to portfolio_path if current_user
   end
 
   def portfolio

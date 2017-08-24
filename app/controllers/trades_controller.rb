@@ -9,12 +9,13 @@ class TradesController < ApplicationController
 
   # POST /trades
   def create
-    puts "trade_params.to_h: " + trade_params.to_h.to_s
     @trade = current_user.trades.new(trade_params)
 
-    puts "@trade.inspect: " + @trade.credit.inspect + @trade.debit.inspect
-
-    if @trade.save!
+    if @trade.save
+      flash[:notice] = "Transaction successfully created"
+      redirect_back(fallback_location: root_path)
+    else
+      flash[:alert] = @trade.errors.full_messages
       redirect_back(fallback_location: root_path)
     end
   end

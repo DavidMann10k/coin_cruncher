@@ -1,12 +1,12 @@
 <div class='header row align-items-center'>
   <div class='col'>
-    <h3>crypto cruncher</h3>
+    <h1>crypto cruncher</h1>
   </div>
 
   <div class='col text-right'>
     <% if current_user %>
       <div class='dropdown d-inline-block'>
-        <button class='btn btn-secondary dropdown-toggle btn-sm'
+        <button class='btn btn-secondary dropdown-toggle btn'
           type='button'id='dropdownMenuButton'
           data-toggle='dropdown'
           aria-haspopup='true'
@@ -33,7 +33,7 @@
 
       <%= link_to 'Sign Out',
         destroy_user_session_path,
-        class: ['btn btn-link d-inline-block btn-sm'],
+        class: ['btn btn-link d-inline-block btn'],
           method: :delete %>
     <% else %>
       <%= link_to 'Sign In', new_user_session_path, class: ['btn btn-primary btn-sm'] %>
