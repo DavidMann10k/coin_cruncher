@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170822031008) do
+ActiveRecord::Schema.define(version: 20170825220751) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "coins", force: :cascade do |t|
+    t.string "crypto_compare_id"
+    t.string "url"
+    t.string "image_url"
+    t.string "name"
+    t.string "coin_name"
+    t.string "full_name"
+    t.string "algorithm"
+    t.string "proof_type"
+    t.string "fully_premined"
+    t.string "total_coin_supply"
+    t.string "premined_value"
+    t.string "total_coins_free_float"
+    t.string "sort_order"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "entries", force: :cascade do |t|
     t.boolean "credit", null: false

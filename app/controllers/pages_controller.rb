@@ -12,4 +12,8 @@ class PagesController < ApplicationController
   def transactions
     @trades = current_user.trades.includes(:debit, :credit)
   end
+
+  def coin_list
+    @response = HTTParty.get('https://www.cryptocompare.com/api/data/coinlist/')
+  end
 end
