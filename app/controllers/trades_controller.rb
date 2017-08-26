@@ -1,5 +1,6 @@
 class TradesController < ApplicationController
 
+  # GET /trades/new
   def new
     @trade = Trade.new(
       credit: Entry.new(credit: true), 
@@ -13,13 +14,14 @@ class TradesController < ApplicationController
 
     if @trade.save
       flash[:notice] = "Transaction successfully created"
-      redirect_back(fallback_location: root_path)
+      redirect_back(fallback_location: portfolio_path)
     else
       flash[:alert] = @trade.errors.full_messages
-      redirect_back(fallback_location: root_path)
+      redirect_back(fallback_location: portfolio_path)
     end
   end
 
+  # GET /trades
   def index
     @trades = current_user.trades.includes(:debit, :credit)
   end

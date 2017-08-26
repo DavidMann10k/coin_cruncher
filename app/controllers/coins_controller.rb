@@ -4,4 +4,5 @@ class CoinsController < ApplicationController
   def index
     # @response = HTTParty.get('https://www.cryptocompare.com/api/data/coinlist/')
   end
+
 end

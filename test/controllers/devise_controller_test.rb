@@ -23,7 +23,6 @@ require 'test_helper'
 #                          POST   /users/confirmation(.:format)     devise/confirmations#create
 
 class DeviseControllerTest < ActionDispatch::IntegrationTest
-  include Devise::Test::ControllerHelpers
 
   test "should get sign in" do
     get new_user_session_path
@@ -31,7 +30,7 @@ class DeviseControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create user" do
-    get new_user_session_path
+    get new_user_registration_path
     assert_response :success
 
     assert_difference('User.count') do
@@ -48,6 +47,7 @@ class DeviseControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  # TODO: Figure out what's wrong with this; it should fail
   test 'should sign in user' do
     get new_user_session_path
     assert_response :success
@@ -58,7 +58,11 @@ class DeviseControllerTest < ActionDispatch::IntegrationTest
           "password"=>"Please10"
         }
       }
-      
-    assert_response :success
+
+    assert_response :success, @response.body
+  end
+
+  test 'should sign user out' do
+
   end
 end

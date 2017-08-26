@@ -2,7 +2,7 @@ require 'test_helper'
 
 class CoinsControllerTest < ActionDispatch::IntegrationTest
 
-  test "should get coin_list" do
+  test "should get coins" do
     get '/coins'
     assert_response :success
   end

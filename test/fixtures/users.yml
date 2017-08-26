@@ -1,3 +1,4 @@
-one: {
+one:
   email: one@example.com
-}
+  encrypted_password: <%= Devise::Encryptor.digest(User, "Please10") %>
+  confirmed_at: <%= Time.now %>
