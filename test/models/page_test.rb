@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class PageTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "page fixtures are valid" do
+    assert pages(:one).valid?
+  end
 end

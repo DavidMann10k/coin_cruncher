@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class EntryTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "entry fixtures are valid" do
+    assert entries(:credit).valid?
+    assert entries(:debit).valid?
+  end
 end
