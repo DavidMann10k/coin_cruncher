@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  crypto_compare_id: MyString
+  url: MyString
+  image_url: MyString
+  name: MyString
+  coin_name: MyString
+  full_name: MyString
+  algorithm: MyString
+  proof_type: MyString
+  fully_premined: MyString
+  total_coin_supply: MyString
+  premined_value: MyString
+  total_coins_free_float: MyString
+  sort_order: MyString
+
+two:
+  crypto_compare_id: MyString
+  url: MyString
+  image_url: MyString
+  name: MyString
+  coin_name: MyString
+  full_name: MyString
+  algorithm: MyString
+  proof_type: MyString
+  fully_premined: MyString
+  total_coin_supply: MyString
+  premined_value: MyString
+  total_coins_free_float: MyString
+  sort_order: MyString
