@@ -23,7 +23,7 @@ require 'test_helper'
 #                          POST   /users/confirmation(.:format)     devise/confirmations#create
 
 class DeviseControllerTest < ActionDispatch::IntegrationTest
-  # include Devise::Test::ControllerHelpers
+  include Devise::Test::ControllerHelpers
 
   test "should get sign in" do
     get new_user_session_path

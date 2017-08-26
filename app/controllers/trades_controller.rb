@@ -20,6 +20,10 @@ class TradesController < ApplicationController
     end
   end
 
+  def index
+    @trades = current_user.trades.includes(:debit, :credit)
+  end
+
   private
     def trade_params
       params.require(:trade).permit(
