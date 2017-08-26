@@ -1,11 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+credit:
   name: MyString
   quantity: 9.99
   trade: one
+  credit: true
+  trade: one
 
-two:
+debit:
   name: MyString
   quantity: 9.99
-  trade: two
+  trade: one
+  credit: false
+  trade: one
