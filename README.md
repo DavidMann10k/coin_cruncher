@@ -7,8 +7,8 @@ It's deployed [to heroku](https://crypto-cruncher.herokuapp.com/).
 
 ## Current Features
 
-* Full user lifecycle with 
-* Create Transactions
+* Full user lifecycle with email confirmation, password resets
+* Create, view Transactions
 
 ## Upcoming Features
 
